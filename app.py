@@ -74,18 +74,17 @@ sample_questions = [
     "Tell about Future of Medicine AI and Healthcare?"
 ]
 
-selected_question = st.selectbox("💡 Choose a sample question :", [""] + sample_questions)
-
-
-user_question = st.text_input("Type your own question here:")
-
-
-final_question = user_question if user_question.strip() else selected_question
+user_question = st.selectbox(
+    "💡 Ask a medical question (choose from samples or type your own):",
+    [""] + sample_questions,
+    index=0,
+    placeholder="Type your question here..."
+)
 
 if st.button("Get Answer"):
-    if final_question:
+    if user_question.strip():
         with get_openai_callback() as cb:
-            response = rag_chain.invoke({"input": final_question})
+            response = rag_chain.invoke({"input": user_question})
 
             st.subheader("✅ Answer")
             st.write(response["answer"])
@@ -96,4 +95,5 @@ if st.button("Get Answer"):
                 st.write(f"**Total Tokens:** {cb.total_tokens}")
                 st.write(f"**Estimated Cost:** ${cb.total_cost:.5f}")
     else:
-        st.warning("Please select or type a question to proceed.")
+        st.warning("Please type or select a question to proceed.")
+
