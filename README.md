@@ -5,7 +5,6 @@ The chatbot reads a medical PDF, splits it into chunks, embeds it, and stores it
 
 ### 🌐 Live App: [Your Streamlit Link Here](https://medicalchatbot-n7xzpc4cghrcgh57unw3fz.streamlit.app/)  
 
-
 ---
 
 ## 🚀 Features  
@@ -62,10 +61,6 @@ The chatbot reads a medical PDF, splits it into chunks, embeds it, and stores it
 - FAISS  
 - HuggingFace Embeddings  
 - Groq API  
-
-Install all dependencies:  
-```bash
-pip install -r requirements.txt
 
 ## **Usage**
 To run this project locally:
