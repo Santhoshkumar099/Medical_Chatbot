@@ -3,7 +3,7 @@
 This project is a **Streamlit web application** that uses **LangChain, FAISS, HuggingFace Embeddings, and Groq API** to build a medical chatbot.  
 The chatbot reads a medical PDF, splits it into chunks, embeds it, and stores it in a vector database for **Retrieval-Augmented Generation (RAG)**.  
 
-### 🌐 Live App: [Your Streamlit Link Here]([https://share.streamlit.io/](https://medicalchatbot-n7xzpc4cghrcgh57unw3fz.streamlit.app/))  
+### 🌐 Live App: [Your Streamlit Link Here]([(https://medicalchatbot-n7xzpc4cghrcgh57unw3fz.streamlit.app/)])  
 
 ---
 
